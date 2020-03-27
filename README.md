@@ -31,4 +31,5 @@ module "protected_eip" {
 
 | Name | Description |
 |------|-------------|
+| id | List of Elastic IP IDs |
 | public\_ip | List of Elastic IP Addresses |
