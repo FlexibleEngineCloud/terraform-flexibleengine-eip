@@ -10,9 +10,9 @@ resource "flexibleengine_vpc_eip_v1" "eip_released" {
     type = "5_bgp"
   }
   bandwidth {
-    name = var.eip_count > 1 ? format("%s-%d", "bandwidth-${var.eip_name}", count.index + 1) : "bandwidth-${var.eip_name}"
-    size = var.eip_bandwidth
-    share_type = "PER"
+    name        = var.eip_count > 1 ? format("%s-%d", "bandwidth-${var.eip_name}", count.index + 1) : "bandwidth-${var.eip_name}"
+    size        = var.eip_bandwidth
+    share_type  = "PER"
     charge_mode = "traffic"
   }
   lifecycle {
@@ -26,9 +26,9 @@ resource "flexibleengine_vpc_eip_v1" "eip_protected" {
     type = "5_bgp"
   }
   bandwidth {
-    name = var.eip_count > 1 ? format("%s-%d", "bandwidth-${var.eip_name}", count.index + 1) : "bandwidth-${var.eip_name}"
-    size = var.eip_bandwidth
-    share_type = "PER"
+    name        = var.eip_count > 1 ? format("%s-%d", "bandwidth-${var.eip_name}", count.index + 1) : "bandwidth-${var.eip_name}"
+    size        = var.eip_bandwidth
+    share_type  = "PER"
     charge_mode = "traffic"
   }
   lifecycle {
