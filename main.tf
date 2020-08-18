@@ -1,9 +1,5 @@
 # EIP Module
 
-terraform {
-  required_version = ">= 0.12.0"
-}
-
 resource "flexibleengine_vpc_eip_v1" "eip_released" {
   count = var.protect_eip == false ? var.eip_count : 0
   publicip {
